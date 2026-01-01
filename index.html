@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio">
+    <title>My Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="nav-logo">Dev.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Work</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-name" class="gradient-text"></h1>
+                    <h2 id="hero-title"></h2>
+                    <p id="hero-tagline"></p>
+                    <div id="hero-buttons" class="cta-group"></div>
+                </div>
+                <!-- Hero visual will be handled by CSS background or optional image -->
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down jumping-arrow"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="about-title" class="section-title"></h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div class="about-content glass-card">
+                    <div class="about-text">
+                        <p id="about-desc"></p>
+                    </div>
+                    <div id="about-stats" class="stats-grid">
+                        <!-- Stats injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="skills-title" class="section-title"></h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div id="skills-container" class="skills-grid">
+                    <!-- Skills categories injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="projects-title" class="section-title"></h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Projects injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="contact-title" class="section-title"></h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div class="contact-wrapper glass-card">
+                    <div class="contact-info">
+                        <p id="contact-desc"></p>
+                        <a id="contact-email" href="" class="email-link"></a>
+                        <div id="social-links" class="social-links">
+                            <!-- Socials injected by JS -->
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> <span id="footer-name"></span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load Data Script -->
+    <script src="content.js"></script>
+    <!-- Main Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
